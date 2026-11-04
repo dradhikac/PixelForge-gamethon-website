@@ -9,7 +9,7 @@ const clientSecret = process.env.GOOGLE_OAUTH_CLIENT_SECRET;
 const refreshToken = process.env.GOOGLE_OAUTH_REFRESH_TOKEN;
 const cronSecret = process.env.CRON_SECRET;
 
-const GAMECRAFT_EMAIL = "gamecraftsupport2026@gmail.com";
+const GAMECRAFT_EMAIL = "pixelforgesupport2026@gmail.com";
 
 if (!supabaseUrl || !supabaseSecretKey) {
   throw new Error("Missing Supabase server environment variables.");

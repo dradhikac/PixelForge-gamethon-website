@@ -37,11 +37,6 @@ export const eventConfig = {
   contact: {
     faculty: [
       {
-        name: "Dr. Sachchida Nand Mishra",
-        email: "sachchida-csds@dsatm.edu.in",
-        phone: "8967082321",
-      },
-      {
         name: "Chaitanya M",
         email: "chaitanya-csds@dsatm.edu.in",
         phone: "9392379564",
@@ -50,16 +45,6 @@ export const eventConfig = {
 
     students: [
       {
-        name: "Chandramouli Joshi",
-        email: "joshichandramouli2005@gmail.com",
-        phone: "9880315904",
-      },
-      {
-        name: "Lakshitha P",
-        email: "lakshi0819@gmail.com",
-        phone: "9019516828"
-      },
-      {
         name: "Rahul",
         email: "iamrahulsingh2005@gmail.com",
         phone: "7207251164",
@@ -67,8 +52,8 @@ export const eventConfig = {
       {
         name: "Kayva Vudarla",
         email: "kavyavudarla158@gmail.com",
-        phone: "9741408290"
-      }
+        phone: "9741408290",
+      },
     ],
 
     address:

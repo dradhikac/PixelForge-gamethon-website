@@ -64,8 +64,8 @@ const CTA = () => {
           {/* Contact Support */}
           <p className="cta-support-line">
             Need assistance or have registration questions? Reach out to{' '}
-            <a href="mailto:gamecraftsupport2026@gmail.com">
-              gamecraftsupport2026@gmail.com
+            <a href="mailto:pixelforgesupport2026@gmail.com">
+              pixelforgesupport2026@gmail.com
             </a>
           </p>
         </motion.div>

@@ -12,7 +12,7 @@ const Rules = () => {
 
   const highlights = [
     { icon: "👥", label: "Team Size", value: "3–4 Members", color: "var(--pf-pink)" },
-    { icon: "🎮", label: "Event Cap", value: "Pixel Forge + 2 Arenas", color: "var(--pf-cyan)" },
+    { icon: "🎮", label: "Arena Games", value: "3 Live Arenas", color: "var(--pf-cyan)" },
     { icon: "🎓", label: "Eligibility", value: "All Enrolled Students", color: "var(--pf-green)" },
     { icon: "🌐", label: "Squads", value: "Cross-College Allowed", color: "var(--pf-golden-yellow)" }
   ];
@@ -22,7 +22,7 @@ const Rules = () => {
       <div className="container">
         {/* Header */}
         <div className="rules-header">
-          <span className="section-kicker">// 06 PROTOCOL</span>
+          <span className="section-kicker">//  PROTOCOL //</span>
           <h2 className="section-title">RULES OF ENGAGEMENT</h2>
           <p className="section-subtitle">
             Essential guidelines, fairness protocols, and competition regulations.
@@ -93,13 +93,7 @@ const Rules = () => {
           })}
         </div>
 
-        {/* Rulebook Full CTA */}
-        <div className="rules-footer-action">
-          <a href="/rulebook" className="full-rulebook-btn">
-            <span>View Complete Official Rulebook PDF</span>
-            <span className="btn-arrow">→</span>
-          </a>
-        </div>
+
       </div>
     </section>
   );

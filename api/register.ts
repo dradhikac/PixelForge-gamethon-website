@@ -134,7 +134,7 @@ const gmail = google.gmail({
 });
 
 const GAMECRAFT_EMAIL =
-  "gamecraftsupport2026@gmail.com";
+  "pixelforgesupport2026@gmail.com";
 
 // Comma-separated organiser/lecturer email addresses.
 // Configure this in Vercel as:

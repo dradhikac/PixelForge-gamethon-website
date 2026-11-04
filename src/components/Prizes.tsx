@@ -5,20 +5,6 @@ import './Prizes.css';
    ICONS (INLINE SVGs - Zero Dependency, Crisp Pixel / Outline Styling)
    ========================================================================== */
 
-/* Golden Game Controller SVG for decorative divider */
-const GameControllerDividerSvg = () => (
-  <svg
-    width="26"
-    height="26"
-    viewBox="0 0 24 24"
-    fill="#ffd000"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
-  >
-    <path d="M21 6H3C1.9 6 1 6.9 1 8V16C1 17.1 1.9 18 3 18H21C22.1 18 23 17.1 23 16V8C23 6.9 22.1 6 21 6ZM9 13H7V15H6V13H4V12H6V10H7V12H9V13ZM17.5 14.5C16.67 14.5 16 13.83 16 13C16 12.17 16.67 11.5 17.5 11.5C18.33 11.5 19 12.17 19 13C19 13.83 18.33 14.5 17.5 14.5ZM19.5 10.5C18.67 10.5 18 9.83 18 9C18 8.17 18.67 7.5 19.5 7.5C20.33 7.5 21 8.17 21 9C21 9.83 20.33 10.5 19.5 10.5Z" />
-  </svg>
-);
-
 /* Trophy SVG Icon for PRIZE MONEY */
 const TrophyCardIcon = () => (
   <svg
@@ -176,15 +162,6 @@ export const Prizes = () => {
             <br />
             Here's what you'll take home from Pixel Forge 2026.
           </motion.p>
-
-          {/* Horizontal Golden Divider with Center Game Controller */}
-          <div className="prizes-divider-row" aria-hidden="true">
-            <span className="prizes-divider-line left" />
-            <div className="prizes-divider-controller">
-              <GameControllerDividerSvg />
-            </div>
-            <span className="prizes-divider-line right" />
-          </div>
         </div>
 
         {/* Content Row: 3 Cards on Left + Mascot on Right */}

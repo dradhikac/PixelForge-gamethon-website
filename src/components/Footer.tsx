@@ -47,7 +47,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#events" onClick={(e) => scrollToSection(e, '#events')}>
-                  The Six Arenas
+                  Game Arenas
                 </a>
               </li>
               <li>
@@ -78,9 +78,7 @@ const Footer = () => {
               <li>
                 <a href="/brochure">Official Brochure PDF</a>
               </li>
-              <li>
-                <a href="/rulebook">Official Rulebook PDF</a>
-              </li>
+
               <li>
                 <a href="/registration" className="footer-highlight-link">
                   Register Your Team →
@@ -94,7 +92,7 @@ const Footer = () => {
             <h4 className="footer-col-heading">EVENT COORDINATORS</h4>
 
             <div className="coordinators-group">
-              <span className="coord-group-title">Faculty Coordinators:</span>
+              <span className="coord-group-title">Faculty Coordinator:</span>
               {eventConfig.contact.faculty.map((contact, i) => (
                 <div key={i} className="coord-card">
                   <span className="coord-name">{contact.name}</span>

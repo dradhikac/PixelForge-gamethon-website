@@ -58,7 +58,7 @@ export const FAQ = () => {
     <section id="faq" className="faq-section">
       <div className="container">
         <div className="faq-header">
-          <span className="section-kicker">// 07 CLARIFICATIONS</span>
+          <span className="section-kicker">// CLARIFICATIONS //</span>
           <h2 className="section-title">FREQUENTLY ASKED QUESTIONS</h2>
           <p className="section-subtitle">
             Everything you need to know before stepping into the arena.
@@ -113,8 +113,7 @@ export const FAQ = () => {
         <div className="faq-support-box">
           <p>
             Have another question? Reach out to the student team at{" "}
-            <a href="mailto:gamecraftsupport2026@gmail.com">gamecraftsupport2026@gmail.com</a>{" "}
-            or check our <a href="/rulebook">Rulebook</a>.
+            <a href="mailto:pixelforgesupport2026@gmail.com">pixelforgesupport2026@gmail.com</a>.
           </p>
         </div>
       </div>

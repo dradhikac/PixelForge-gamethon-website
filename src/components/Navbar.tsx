@@ -172,14 +172,7 @@ const Navbar = () => {
             Brochure
           </a>
 
-          {/* Rulebook */}
-          <a
-            href="/rulebook"
-            className="nav-link doc-link"
-            onClick={handlePageNavigation}
-          >
-            Rulebook
-          </a>
+
         </div>
 
         {/* Right Side: Theme toggle and glowing orange Register Now button */}
@@ -250,13 +243,7 @@ const Navbar = () => {
                 >
                   View Brochure
                 </a>
-                <a
-                  href="/rulebook"
-                  className="mobile-nav-link"
-                  onClick={handlePageNavigation}
-                >
-                  View Rulebook
-                </a>
+
                 <a
                   href="/registration"
                   className="mobile-nav-cta"
