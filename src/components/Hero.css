@@ -188,7 +188,8 @@ body,
 .college-emblem-wrap {
   width: calc(54 * var(--u));
   height: calc(54 * var(--u));
-  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50% !important;
   background: #fff;
   padding: calc(2 * var(--u));
   display: flex;
@@ -203,7 +204,8 @@ body,
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50% !important;
   display: block;
 }
 
@@ -445,7 +447,8 @@ body,
 .status-radar-glow-dot {
   width: calc(16 * var(--u));
   height: calc(16 * var(--u));
-  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50% !important;
   background: #22c55e;
   box-shadow: 0 0 calc(10 * var(--u)) #22c55e;
   animation: pf-live-pulse 1.6s ease-in-out infinite;
