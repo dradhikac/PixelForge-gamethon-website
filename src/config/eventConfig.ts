@@ -22,7 +22,7 @@ export const eventConfig = {
 
   // Registration
   googleFormUrl:
-    "https://docs.google.com/forms/d/e/1FAIpQLSfg6DS1RSHt6iJX3Ln1SDbx62aSkoKpuo9ZZ2em2P27W1vJOA/viewform?usp=publish-editor",
+    "https://docs.google.com/forms/d/e/1FAIpQLSfg6DS1RSHt6iJX3Ln1SDbx62aSkoKpuo9ZZ2em2P27W1vJOA/viewform",
 
   registrationOpen: true,
   isFreeEvent: false,
