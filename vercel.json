@@ -25,6 +25,10 @@
     {
       "source": "/rulebook",
       "destination": "/index.html"
+    },
+    {
+      "source": "/((?!api/|_next/|_static/|favicon.ico|assets/|.*\\..*).*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
@@ -37,7 +41,7 @@
         },
         {
           "key": "X-Frame-Options",
-          "value": "DENY"
+          "value": "SAMEORIGIN"
         },
         {
           "key": "Referrer-Policy",
