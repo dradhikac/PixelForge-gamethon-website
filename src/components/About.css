@@ -1,0 +1,493 @@
+﻿/* ==========================================================================
+   ABOUT SECTION (CSS) — PIXEL FORGE 2026 EXACT STORYBOARD SPECIFICATION
+   Target Viewport: 1672 × 941 (Single-Screen 100vh / 100svh, Zero Scroll)
+   ========================================================================== */
+
+.about-section {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 76px);
+  height: calc(100svh - 76px);
+  max-height: calc(100svh - 76px);
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 30%, #1e093d 0%, #120426 60%, #0c021a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   PIXEL-BLOCK CORNER DECORATIONS & AMBIENT GLOW
+   ========================================================================== */
+.about-pixel-block-tl {
+  position: absolute;
+  top: 4%;
+  left: 2%;
+  width: 120px;
+  height: 120px;
+  background-image:
+    radial-gradient(14px 14px at 15px 15px, rgba(135, 0, 255, 0.35) 100%, transparent),
+    radial-gradient(20px 20px at 45px 35px, rgba(135, 0, 255, 0.22) 100%, transparent),
+    radial-gradient(16px 16px at 25px 75px, rgba(135, 0, 255, 0.28) 100%, transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-pixel-block-tr {
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  width: 120px;
+  height: 120px;
+  background-image:
+    radial-gradient(14px 14px at 100px 15px, rgba(135, 0, 255, 0.35) 100%, transparent),
+    radial-gradient(20px 20px at 70px 40px, rgba(135, 0, 255, 0.22) 100%, transparent),
+    radial-gradient(16px 16px at 90px 80px, rgba(135, 0, 255, 0.28) 100%, transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-pixel-block-bl {
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  width: 140px;
+  height: 140px;
+  background-image:
+    radial-gradient(16px 16px at 20px 110px, rgba(255, 208, 0, 0.35) 100%, transparent),
+    radial-gradient(22px 22px at 55px 95px, rgba(255, 106, 0, 0.25) 100%, transparent),
+    radial-gradient(18px 18px at 30px 60px, rgba(135, 0, 255, 0.25) 100%, transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-pixel-block-br {
+  position: absolute;
+  bottom: 3%;
+  right: 2%;
+  width: 140px;
+  height: 140px;
+  background-image:
+    radial-gradient(16px 16px at 115px 110px, rgba(255, 208, 0, 0.35) 100%, transparent),
+    radial-gradient(22px 22px at 80px 95px, rgba(255, 106, 0, 0.25) 100%, transparent),
+    radial-gradient(18px 18px at 105px 60px, rgba(135, 0, 255, 0.25) 100%, transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-ambient-glow-core {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  height: 50vh;
+  background: radial-gradient(circle, rgba(135, 0, 255, 0.14) 0%, rgba(224, 0, 255, 0.05) 50%, transparent 75%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   VIEWPORT CONTAINER
+   ========================================================================== */
+.about-viewport-container {
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 2.5vw, 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6px, 1.25vh, 14px);
+  position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   TOP HEADER GROUP
+   ========================================================================== */
+.about-header-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(4px, 0.8vh, 8px);
+  width: 100%;
+}
+
+/* 1. Kicker Badge: // ABOUT PIXEL FORGE // */
+.about-kicker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 14px;
+  border-radius: 6px;
+  background: rgba(26, 7, 52, 0.8);
+  border: 1.5px solid rgba(135, 0, 255, 0.5);
+  box-shadow: 0 0 12px rgba(135, 0, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.kicker-slash {
+  font-family: 'Pixelify Sans', monospace, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffd000;
+  letter-spacing: 0.05em;
+}
+
+.kicker-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #ffd000;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* 2. Main Title: ABOUT PIXEL FORGE */
+.about-main-title {
+  font-family: 'Pixelify Sans', 'Press Start 2P', monospace, sans-serif;
+  font-size: clamp(1.8rem, 2.6vw, 2.8rem);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35em;
+}
+
+.about-title-white {
+  color: #ffffff;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.65);
+}
+
+.about-title-gold {
+  color: #ffd000;
+  text-shadow: 0 0 22px rgba(255, 208, 0, 0.75);
+}
+
+/* 3. Intro Description with Golden Highlight */
+.about-intro-text {
+  font-family: var(--font-body);
+  font-size: clamp(0.85rem, 1.05vw, 1.05rem);
+  color: #ffffff;
+  line-height: 1.45;
+  margin: 0;
+  max-width: 860px;
+}
+
+.about-intro-highlight {
+  color: #ffd000;
+  font-weight: 800;
+  text-shadow: 0 0 10px rgba(255, 208, 0, 0.4);
+}
+
+/* ==========================================================================
+   4. DECORATIVE GOLDEN DIVIDER WITH CENTER GAMEPAD
+   ========================================================================== */
+.about-divider-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 440px;
+  margin: clamp(1px, 0.4vh, 4px) 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1.5px;
+}
+
+.divider-line.left {
+  background: linear-gradient(90deg, transparent, #ffd000);
+}
+
+.divider-line.right {
+  background: linear-gradient(90deg, #ffd000, transparent);
+}
+
+.divider-controller-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 8px rgba(255, 208, 0, 0.7));
+}
+
+/* ==========================================================================
+   5. THREE MAIN ACTIVITY CARDS: COMPETE | BUILD | DEMO
+   ========================================================================== */
+.about-three-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(14px, 1.8vw, 24px);
+  width: 100%;
+  max-width: 1320px;
+  box-sizing: border-box;
+}
+
+.about-activity-card {
+  height: clamp(220px, 33vh, 310px);
+  border-radius: 20px;
+  background: rgba(24, 7, 48, 0.85);
+  border: 1.5px solid rgba(135, 0, 255, 0.55);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(135, 0, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 0.9rem 0.75rem;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-activity-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(224, 0, 255, 0.75);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8), 0 0 25px rgba(224, 0, 255, 0.35);
+}
+
+.card-character-stage {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 0;
+  overflow: visible;
+}
+
+.activity-character-img {
+  height: 100%;
+  width: auto;
+  max-width: 96%;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.85))
+          drop-shadow(0 0 16px rgba(135, 0, 255, 0.3));
+  transition: transform 0.25s ease;
+}
+
+.about-activity-card:hover .activity-character-img {
+  transform: scale(1.03);
+}
+
+/* Card Badge Pill Overlapping Character */
+.card-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 5px 18px;
+  border-radius: 8px;
+  background: rgba(18, 5, 36, 0.96);
+  border: 2px solid #ffd000;
+  box-shadow: 0 0 14px rgba(255, 208, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  margin-top: -12px;
+  z-index: 2;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.card-badge-title {
+  font-family: 'Pixelify Sans', 'Press Start 2P', monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+/* Card Description Text */
+.card-desc-text {
+  font-family: var(--font-body);
+  font-size: clamp(0.78rem, 0.9vw, 0.92rem);
+  color: #d8c4f5;
+  line-height: 1.35;
+  margin: 0.45rem 0 0;
+  max-width: 90%;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   6. BOTTOM THEMES BANNER
+   ========================================================================== */
+.about-themes-banner {
+  width: 100%;
+  max-width: 1320px;
+  height: clamp(90px, 14.5vh, 125px);
+  border-radius: 20px;
+  background: rgba(24, 7, 48, 0.85);
+  border: 1.5px solid rgba(135, 0, 255, 0.55);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(135, 0, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  padding: 0 clamp(16px, 2.5vw, 36px);
+  gap: clamp(14px, 2vw, 28px);
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+/* Left: THEMES pill badge */
+.themes-left-area {
+  flex-shrink: 0;
+}
+
+.themes-brand-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 20px;
+  border-radius: 8px;
+  background: rgba(18, 5, 36, 0.96);
+  border: 2px solid #ffd000;
+  box-shadow: 0 0 16px rgba(255, 208, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.themes-brand-text {
+  font-family: 'Pixelify Sans', 'Press Start 2P', monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.themes-brand-slashes {
+  font-family: 'Pixelify Sans', monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffd000;
+  line-height: 1;
+}
+
+/* Center-Left: Magical Mystery Chest */
+.themes-chest-stage {
+  position: relative;
+  width: 140px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+.themes-chest-img {
+  position: absolute;
+  bottom: -6px;
+  width: auto;
+  height: 140%;
+  max-width: none;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.9))
+          drop-shadow(0 0 22px rgba(255, 208, 0, 0.45));
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Vertical Separator Divider */
+.themes-vertical-divider {
+  width: 1.5px;
+  height: 52px;
+  background: rgba(135, 0, 255, 0.55);
+  flex-shrink: 0;
+}
+
+/* Right: Reveal sentence */
+.themes-copy-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.themes-reveal-sentence {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.35vw, 1.38rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+  margin: 0;
+  text-align: left;
+}
+
+.themes-gold-highlight {
+  color: #ffd000;
+  font-weight: 800;
+  text-shadow: 0 0 12px rgba(255, 208, 0, 0.4);
+}
+
+/* ==========================================================================
+   RESPONSIVE BEHAVIOR
+   ========================================================================== */
+@media (max-height: 820px) {
+  .about-section {
+    height: auto;
+    min-height: calc(100vh - 76px);
+    max-height: none;
+    overflow-y: visible;
+    padding: 30px 16px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .about-section {
+    height: auto;
+    min-height: calc(100vh - 76px);
+    max-height: none;
+    overflow-y: visible;
+    padding: 40px 16px;
+  }
+
+  .about-three-cards-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-activity-card {
+    height: 280px;
+  }
+
+  .about-themes-banner {
+    flex-direction: column;
+    height: auto;
+    padding: 24px;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .themes-chest-stage {
+    width: 100%;
+    height: 120px;
+  }
+
+  .themes-chest-img {
+    position: relative;
+    height: 100%;
+    bottom: auto;
+  }
+
+  .themes-vertical-divider {
+    display: none;
+  }
+
+  .themes-reveal-sentence {
+    text-align: center;
+  }
+}

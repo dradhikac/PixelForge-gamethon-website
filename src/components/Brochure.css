@@ -1,0 +1,33 @@
+.brochure-page {
+  min-height: 100vh;
+  padding: 6rem 0 0;
+  background: var(--black);
+  overflow: hidden;
+}
+
+.brochure-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: var(--black);
+}
+
+.brochure-iframe {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 6rem);
+  min-height: 900px;
+  border: none;
+  background: var(--black);
+}
+
+@media (max-width: 768px) {
+  .brochure-page {
+    padding-top: 5rem;
+  }
+
+  .brochure-iframe {
+    height: calc(100vh - 5rem);
+    min-height: 700px;
+  }
+}

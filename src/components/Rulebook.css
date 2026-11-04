@@ -1,0 +1,40 @@
+.rulebook-page {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 86px;
+  background: var(--surface);
+}
+
+.rulebook-iframe {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 86px);
+  min-height: 700px;
+  border: none;
+  background: var(--surface);
+}
+
+@media (max-width: 768px) {
+  .rulebook-page {
+    padding-top: 70px;
+  }
+
+  .rulebook-iframe {
+    height: calc(100vh - 70px);
+    min-height: 600px;
+  }
+}
+
+/* Remove unwanted extra lines around the PDF */
+.rulebook-page,
+.rulebook-container,
+.rulebook-iframe {
+  margin: 0;
+  border-top: none !important;
+  border-bottom: none !important;
+  outline: none;
+}
+
+.rulebook-page {
+  padding-top: 86px;
+}

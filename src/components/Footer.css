@@ -1,0 +1,304 @@
+/* ==========================================================================
+   FOOTER (CSS) — ROYAL VOXEL BLACKSMITH WORLD
+   ========================================================================== */
+
+.footer-section {
+  position: relative;
+  background: #0a0514;
+  border-top: 1.5px solid rgba(139, 53, 255, 0.25);
+  padding: 5rem 0 2.5rem 0;
+  color: #cbd5e1;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1.4fr 1.1fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+/* Brand Column */
+.footer-col-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.footer-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-crest-icon {
+  font-size: 1.4rem;
+}
+
+.footer-brand-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+
+.footer-year-badge {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  color: var(--pf-golden-yellow);
+  background: rgba(255, 208, 0, 0.12);
+  border: 1px solid rgba(255, 208, 0, 0.35);
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+}
+
+.footer-tagline-text {
+  font-size: 0.95rem;
+  color: var(--pf-lavender);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.footer-org-box {
+  background: rgba(16, 9, 31, 0.7);
+  border: 1px solid rgba(139, 53, 255, 0.25);
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+}
+
+.org-label {
+  font-family: var(--font-display);
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  color: var(--pf-golden-yellow);
+}
+
+.org-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0.35rem 0 0.15rem 0;
+  line-height: 1.35;
+}
+
+.org-institute {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Headings */
+.footer-col-heading {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  color: var(--pf-golden-yellow);
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+/* Navigation Column */
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-nav-list a {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.footer-nav-list a:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.footer-highlight-link {
+  color: var(--pf-molten-orange) !important;
+  font-weight: 700;
+}
+
+.footer-highlight-link:hover {
+  color: var(--pf-golden-yellow) !important;
+}
+
+/* Coordinators Column */
+.footer-col-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.coordinators-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.coord-group-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--pf-lavender);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.coord-card {
+  background: rgba(16, 9, 31, 0.6);
+  border: 1px solid rgba(139, 53, 255, 0.2);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.coord-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.coord-email,
+.coord-phone {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  transition: color 0.2s ease;
+}
+
+.coord-email:hover,
+.coord-phone:hover {
+  color: var(--pf-golden-yellow);
+}
+
+.students-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.student-coord-item {
+  background: rgba(16, 9, 31, 0.6);
+  border: 1px solid rgba(139, 53, 255, 0.2);
+  border-radius: 6px;
+  padding: 0.5rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.student-name {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.student-phone {
+  font-size: 0.75rem;
+  color: var(--pf-lavender);
+  transition: color 0.2s ease;
+}
+
+.student-phone:hover {
+  color: var(--pf-golden-yellow);
+}
+
+/* Venue Column */
+.footer-col-venue {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-venue-text {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.footer-venue-text strong {
+  color: #ffffff;
+}
+
+.footer-map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--pf-golden-yellow);
+  background: rgba(255, 208, 0, 0.08);
+  border: 1px solid rgba(255, 208, 0, 0.3);
+  padding: 0.55rem 0.95rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.footer-map-btn:hover {
+  background: rgba(255, 208, 0, 0.2);
+  border-color: var(--pf-golden-yellow);
+  color: #ffffff;
+}
+
+.footer-admin-link a {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+  transition: color 0.2s ease;
+}
+
+.footer-admin-link a:hover {
+  color: var(--pf-lavender);
+}
+
+/* Bottom Strip */
+.footer-bottom-strip {
+  border-top: 1px solid rgba(139, 53, 255, 0.2);
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.copyright-text {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.voxel-signature {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--pf-lavender);
+}
+
+@media (max-width: 1080px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .students-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom-strip {
+    flex-direction: column;
+    text-align: center;
+  }
+}

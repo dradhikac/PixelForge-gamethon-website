@@ -1,0 +1,513 @@
+/* ==========================================================================
+   PIXEL FORGE 2026 — REWARDS & HONORS (PRIZES) SECTION STYLING
+   Scoped exclusively to .prizes-* to prevent collisions with other components.
+   ========================================================================== */
+
+.prizes-section {
+  position: relative;
+  scroll-margin-top: 85px;
+  background-color: #0e021a;
+  background-image: 
+    radial-gradient(circle at 50% 18%, rgba(135, 0, 255, 0.14) 0%, transparent 60%),
+    radial-gradient(circle at 15% 50%, rgba(255, 208, 0, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 85% 50%, rgba(135, 0, 255, 0.08) 0%, transparent 45%),
+    linear-gradient(180deg, #10021f 0%, #0d0118 50%, #120324 100%);
+  padding: 5.5rem 1.5rem 6.5rem 1.5rem;
+  overflow: hidden;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   EDGE PIXEL BLOCK DECORATIONS (Atmospheric 8-bit gaming aesthetic)
+   -------------------------------------------------------------------------- */
+
+.prizes-pixel-block-tl,
+.prizes-pixel-block-tr,
+.prizes-pixel-block-bl,
+.prizes-pixel-block-br {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Top Left Purple Pixel Cluster */
+.prizes-pixel-block-tl {
+  top: 40px;
+  left: 28px;
+  width: 16px;
+  height: 16px;
+  background: rgba(135, 0, 255, 0.45);
+  box-shadow:
+    16px 0 0 rgba(135, 0, 255, 0.3),
+    0 16px 0 rgba(135, 0, 255, 0.25),
+    32px 16px 0 rgba(135, 0, 255, 0.15),
+    16px 32px 0 rgba(135, 0, 255, 0.1);
+}
+
+/* Top Right Purple Pixel Cluster */
+.prizes-pixel-block-tr {
+  top: 40px;
+  right: 28px;
+  width: 16px;
+  height: 16px;
+  background: rgba(135, 0, 255, 0.45);
+  box-shadow:
+    -16px 0 0 rgba(135, 0, 255, 0.3),
+    0 16px 0 rgba(135, 0, 255, 0.25),
+    -32px 16px 0 rgba(135, 0, 255, 0.15),
+    -16px 32px 0 rgba(135, 0, 255, 0.1);
+}
+
+/* Bottom Left Golden Pixel Decoration */
+.prizes-pixel-block-bl {
+  bottom: 35px;
+  left: 32px;
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 208, 0, 0.35);
+  box-shadow:
+    12px 0 0 rgba(255, 208, 0, 0.2),
+    0 -12px 0 rgba(255, 208, 0, 0.2),
+    24px -12px 0 rgba(255, 208, 0, 0.12);
+}
+
+/* Bottom Right Golden Pixel Decoration */
+.prizes-pixel-block-br {
+  bottom: 35px;
+  right: 32px;
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 208, 0, 0.35);
+  box-shadow:
+    -12px 0 0 rgba(255, 208, 0, 0.2),
+    0 -12px 0 rgba(255, 208, 0, 0.2),
+    -24px -12px 0 rgba(255, 208, 0, 0.12);
+}
+
+/* Core Ambient Glow behind Section */
+.prizes-ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(135, 0, 255, 0.12) 0%, rgba(255, 208, 0, 0.04) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   CONTAINER & HEADER
+   -------------------------------------------------------------------------- */
+
+.prizes-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prizes-header-group {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 2.5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Kicker Badge: // 04 REWARDS & HONORS // */
+.prizes-kicker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(22, 6, 44, 0.85);
+  border: 1px solid rgba(135, 0, 255, 0.45);
+  padding: 0.35rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 14px rgba(135, 0, 255, 0.2);
+}
+
+.prizes-kicker-slash {
+  color: #ffd000;
+  font-family: var(--font-display, 'Press Start 2P', monospace);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+}
+
+.prizes-kicker-text {
+  color: #ffd000;
+  font-family: var(--font-display, 'Press Start 2P', monospace);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+/* Main Heading: PRIZES & RECOGNITION */
+.prizes-main-heading {
+  font-family: var(--font-display, 'Press Start 2P', monospace);
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin: 0.4rem 0 0.9rem 0;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.prizes-heading-gold {
+  color: #ffd000;
+  text-shadow: 0 0 20px rgba(255, 208, 0, 0.45);
+}
+
+/* Subtitle Description */
+.prizes-header-subtitle {
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: clamp(0.95rem, 1.25vw, 1.05rem);
+  line-height: 1.6;
+  color: #d8c4f5;
+  max-width: 680px;
+  margin: 0 auto 1.35rem auto;
+  text-align: center;
+}
+
+/* Horizontal Golden Divider with Center Game Controller */
+.prizes-divider-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 520px;
+  margin: 0.2rem auto 0 auto;
+}
+
+.prizes-divider-line {
+  flex: 1;
+  height: 2px;
+}
+
+.prizes-divider-line.left {
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 208, 0, 0.85) 100%);
+  box-shadow: 0 0 8px rgba(255, 208, 0, 0.4);
+}
+
+.prizes-divider-line.right {
+  background: linear-gradient(90deg, rgba(255, 208, 0, 0.85) 0%, transparent 100%);
+  box-shadow: 0 0 8px rgba(255, 208, 0, 0.4);
+}
+
+.prizes-divider-controller {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.5rem;
+  background: rgba(22, 6, 44, 0.9);
+  border: 1px solid rgba(255, 208, 0, 0.6);
+  border-radius: 6px;
+  box-shadow: 0 0 12px rgba(255, 208, 0, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   CONTENT ROW: 3 CARDS ON LEFT + MASCOT ON RIGHT
+   -------------------------------------------------------------------------- */
+
+.prizes-content-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1.75rem;
+  width: 100%;
+}
+
+/* Left: 3 Reward Cards Grid */
+.prizes-cards-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.35rem;
+  align-items: stretch;
+}
+
+/* Common Card Container */
+.prizes-card {
+  background: rgba(18, 5, 36, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 1.5rem 1.25rem 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.prizes-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Card 1 — PRIZE MONEY (Golden Yellow) */
+.prizes-card-gold {
+  border: 1.5px solid #FFD500;
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.7),
+    0 0 22px rgba(255, 213, 0, 0.22),
+    inset 0 0 14px rgba(255, 213, 0, 0.06);
+}
+
+.prizes-card-gold:hover {
+  border-color: #ffe033;
+  box-shadow: 
+    0 16px 45px rgba(0, 0, 0, 0.85),
+    0 0 35px rgba(255, 213, 0, 0.45),
+    inset 0 0 20px rgba(255, 213, 0, 0.12);
+}
+
+/* Card 2 — CERTIFICATE (Neon Magenta) */
+.prizes-card-magenta {
+  border: 1.5px solid #FF00D4;
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.7),
+    0 0 22px rgba(255, 0, 212, 0.22),
+    inset 0 0 14px rgba(255, 0, 212, 0.06);
+}
+
+.prizes-card-magenta:hover {
+  border-color: #ff38df;
+  box-shadow: 
+    0 16px 45px rgba(0, 0, 0, 0.85),
+    0 0 35px rgba(255, 0, 212, 0.45),
+    inset 0 0 20px rgba(255, 0, 212, 0.12);
+}
+
+/* Card 3 — HANDS-ON EXPERIENCE (Electric Cyan) */
+.prizes-card-cyan {
+  border: 1.5px solid #00E5FF;
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.7),
+    0 0 22px rgba(0, 229, 255, 0.22),
+    inset 0 0 14px rgba(0, 229, 255, 0.06);
+}
+
+.prizes-card-cyan:hover {
+  border-color: #38eeff;
+  box-shadow: 
+    0 16px 45px rgba(0, 0, 0, 0.85),
+    0 0 35px rgba(0, 229, 255, 0.45),
+    inset 0 0 20px rgba(0, 229, 255, 0.12);
+}
+
+/* Card Artwork Box */
+.prizes-card-art-box {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  position: relative;
+}
+
+.prizes-card-img {
+  max-height: 100%;
+  width: auto;
+  max-width: 95%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.65));
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.prizes-card:hover .prizes-card-img {
+  transform: scale(1.04);
+}
+
+/* --------------------------------------------------------------------------
+   CHAMFERED TITLE BANNERS
+   -------------------------------------------------------------------------- */
+
+.prizes-title-banner {
+  width: 100%;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0 0.85rem;
+  clip-path: polygon(
+    10px 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    10px 100%,
+    0 calc(100% - 10px),
+    0 10px
+  );
+  margin-bottom: 0.85rem;
+}
+
+.prizes-banner-gold {
+  background: linear-gradient(180deg, #574200 0%, #2e2300 100%);
+  border: 1.5px solid #FFD500;
+  box-shadow: 0 0 12px rgba(255, 213, 0, 0.35);
+  color: #ffffff;
+}
+
+.prizes-banner-magenta {
+  background: linear-gradient(180deg, #640053 0%, #35002c 100%);
+  border: 1.5px solid #FF00D4;
+  box-shadow: 0 0 12px rgba(255, 0, 212, 0.35);
+  color: #ffffff;
+}
+
+.prizes-banner-cyan {
+  background: linear-gradient(180deg, #004752 0%, #00262c 100%);
+  border: 1.5px solid #00E5FF;
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.35);
+  color: #ffffff;
+}
+
+.prizes-banner-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.prizes-banner-text {
+  font-family: var(--font-display, 'Press Start 2P', monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Highlight Subtitle (Yellow Italic) */
+.prizes-card-highlight {
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: 0.92rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #ffd000;
+  text-align: center;
+  margin: 0 0 0.85rem 0;
+  line-height: 1.35;
+}
+
+/* Description Text */
+.prizes-card-description {
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #d8c4f5;
+  margin: 0;
+  text-align: left;
+}
+
+/* --------------------------------------------------------------------------
+   RIGHT COLUMN: FULL-BODY WARRIOR MASCOT
+   -------------------------------------------------------------------------- */
+
+.prizes-mascot-wrapper {
+  width: 340px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  align-self: stretch;
+}
+
+.prizes-mascot-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(135, 0, 255, 0.28) 0%, rgba(255, 208, 0, 0.12) 45%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.prizes-mascot-img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.85));
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.prizes-mascot-wrapper:hover .prizes-mascot-img {
+  transform: scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+  .prizes-mascot-wrapper {
+    width: 290px;
+  }
+
+  .prizes-banner-text {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .prizes-content-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .prizes-cards-grid {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .prizes-mascot-wrapper {
+    width: 320px;
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .prizes-section {
+    padding: 3.5rem 1rem 4.5rem 1rem;
+  }
+
+  .prizes-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .prizes-card-art-box {
+    height: 160px;
+  }
+
+  .prizes-banner-text {
+    font-size: 0.72rem;
+  }
+
+  .prizes-mascot-wrapper {
+    width: 260px;
+  }
+}

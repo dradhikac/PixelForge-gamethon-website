@@ -1,0 +1,151 @@
+/* ==========================================================================
+   FAQS SECTION (CSS) — ROYAL VOXEL FORGE
+   ========================================================================== */
+
+.faq-section {
+  position: relative;
+  background: radial-gradient(circle at 50% 60%, rgba(139, 53, 255, 0.06) 0%, transparent 70%);
+}
+
+.faq-header {
+  text-align: center;
+}
+
+.faq-accordion-list {
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item-card {
+  background: var(--pf-stone-card);
+  border: 1.5px solid var(--pf-stone-border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+}
+
+.faq-item-card:hover,
+.faq-item-card.open {
+  border-color: rgba(255, 181, 46, 0.5);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7), 0 0 16px rgba(139, 53, 255, 0.15);
+}
+
+.faq-question-btn {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  gap: 1rem;
+  outline: none;
+}
+
+.faq-q-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.faq-tag-badge {
+  font-family: var(--font-display);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  color: var(--pf-golden-yellow);
+  background: rgba(255, 208, 0, 0.1);
+  border: 1px solid rgba(255, 208, 0, 0.25);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.faq-q-text {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  line-height: 1.4;
+}
+
+.faq-expand-icon {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: var(--pf-lavender);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(139, 53, 255, 0.15);
+  border-radius: 6px;
+  border: 1px solid rgba(139, 53, 255, 0.3);
+}
+
+.faq-item-card.open .faq-expand-icon {
+  color: var(--pf-golden-yellow);
+  border-color: rgba(255, 208, 0, 0.4);
+}
+
+.faq-answer-wrap {
+  overflow: hidden;
+}
+
+.faq-answer-inner {
+  padding: 0 1.5rem 1.4rem 1.5rem;
+  border-top: 1px solid rgba(139, 53, 255, 0.15);
+  padding-top: 1rem;
+}
+
+.faq-answer-inner p {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.faq-support-box {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--pf-lavender);
+}
+
+.faq-support-box a {
+  color: var(--pf-golden-yellow);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.faq-support-box a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .faq-question-btn {
+    padding: 1rem 1.2rem;
+  }
+
+  .faq-q-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .faq-q-text {
+    font-size: 0.96rem;
+  }
+}
+

@@ -1,0 +1,207 @@
+/* ==========================================================================
+   RULES & RULEBOOK (CSS) — ROYAL VOXEL BLACKSMITH WORLD
+   ========================================================================== */
+
+.rules-section {
+  position: relative;
+  background: radial-gradient(circle at 50% 60%, rgba(139, 53, 255, 0.06) 0%, transparent 70%);
+}
+
+.rules-header {
+  text-align: center;
+}
+
+/* Highlights Grid */
+.rules-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.rule-highlight-card {
+  background: var(--pf-stone-card);
+  border: 1.5px solid;
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+
+.rule-highlight-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+}
+
+.highlight-icon-box {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.highlight-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight-meta-label {
+  font-family: var(--font-display);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  color: var(--pf-lavender);
+}
+
+.highlight-meta-val {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0.15rem;
+}
+
+/* Accordion Container */
+.rules-accordion-container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.rule-accordion-panel {
+  background: var(--pf-stone-card);
+  border: 1.5px solid var(--pf-stone-border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.rule-accordion-panel:hover,
+.rule-accordion-panel.open {
+  border-color: rgba(255, 181, 46, 0.5);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.65);
+}
+
+.rule-accordion-header-btn {
+  width: 100%;
+  padding: 1.15rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  gap: 1rem;
+}
+
+.rule-btn-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.rule-bullet-point {
+  color: var(--pf-golden-yellow);
+  font-size: 0.75rem;
+}
+
+.rule-cat-title {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.rule-toggle-icon {
+  font-family: monospace;
+  font-size: 1.4rem;
+  color: var(--pf-lavender);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(139, 53, 255, 0.15);
+  border-radius: 6px;
+  border: 1px solid rgba(139, 53, 255, 0.3);
+  flex-shrink: 0;
+}
+
+.rule-accordion-panel.open .rule-toggle-icon {
+  color: var(--pf-golden-yellow);
+  border-color: rgba(255, 208, 0, 0.4);
+}
+
+.rule-accordion-body {
+  overflow: hidden;
+}
+
+.rule-items-ul {
+  list-style: none;
+  padding: 0 1.5rem 1.4rem 1.5rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-top: 1px solid rgba(139, 53, 255, 0.15);
+  padding-top: 1rem;
+}
+
+.rule-single-li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.rule-item-check {
+  color: var(--pf-green);
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+/* Footer Action */
+.rules-footer-action {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.full-rulebook-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(16, 9, 31, 0.85);
+  border: 1.5px solid var(--pf-lavender);
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.full-rulebook-btn:hover {
+  background: rgba(50, 17, 95, 0.7);
+  border-color: var(--pf-golden-yellow);
+  color: var(--pf-golden-yellow);
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(255, 208, 0, 0.35);
+}
+
+@media (max-width: 768px) {
+  .rules-highlights-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
