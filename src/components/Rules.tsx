@@ -10,13 +10,6 @@ const Rules = () => {
     setOpenCategory(openCategory === categoryId ? null : categoryId);
   };
 
-  const highlights = [
-    { icon: "👥", label: "Team Size", value: "3–4 Members", color: "var(--pf-pink)" },
-    { icon: "🎮", label: "Arena Games", value: "3 Live Arenas", color: "var(--pf-cyan)" },
-    { icon: "🎓", label: "Eligibility", value: "All Enrolled Students", color: "var(--pf-green)" },
-    { icon: "🌐", label: "Squads", value: "Cross-College Allowed", color: "var(--pf-golden-yellow)" }
-  ];
-
   return (
     <section id="rules" className="rules-section">
       <div className="container">
@@ -27,23 +20,6 @@ const Rules = () => {
           <p className="section-subtitle">
             Essential guidelines, fairness protocols, and competition regulations.
           </p>
-        </div>
-
-        {/* 4 Quick Highlights Grid */}
-        <div className="rules-highlights-grid">
-          {highlights.map((item) => (
-            <div
-              key={item.label}
-              className="rule-highlight-card"
-              style={{ borderColor: item.color }}
-            >
-              <span className="highlight-icon-box">{item.icon}</span>
-              <div className="highlight-text-wrap">
-                <span className="highlight-meta-label">{item.label}</span>
-                <span className="highlight-meta-val">{item.value}</span>
-              </div>
-            </div>
-          ))}
         </div>
 
         {/* Expandable Categories Accordion */}
@@ -92,8 +68,6 @@ const Rules = () => {
             );
           })}
         </div>
-
-
       </div>
     </section>
   );
