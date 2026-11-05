@@ -57,7 +57,7 @@ const Registration = () => {
             title="Pixel Forge hackathon registration form"
             src={embedUrl}
             width="100%"
-            height="1250"
+            height="520"
             loading="lazy"
           >
             Loading registration form…
