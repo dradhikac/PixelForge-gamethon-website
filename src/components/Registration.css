@@ -1,98 +1,283 @@
+/* ==========================================================================
+   REGISTRATION PAGE (CSS) — ROYAL VOXEL THEME
+   Aligned with Pixel Forge 2026 Midnight Purple & Molten Gold palette
+   ========================================================================== */
+
 .registration-page {
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
-  padding: 8rem 1.5rem 4rem;
-  background: var(--black);
-  color: var(--white);
+  overflow-x: hidden;
+  padding: calc(68px + 2.5rem) 1.5rem 5rem;
+  background: radial-gradient(ellipse at 70% 20%, #2a0d52 0%, #19063a 50%, #0f0322 100%);
+  color: #f8fafc;
+  box-sizing: border-box;
 }
 
+/* Subtle voxel background grid */
 .registration-grid {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.12;
+  opacity: 0.16;
   background-image:
-    linear-gradient(to right, var(--white) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--white) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(to right, rgba(168, 85, 247, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(168, 85, 247, 0.25) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.85) 0%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.85) 0%, transparent 80%);
+}
+
+/* Atmospheric center glow */
+.registration-ambient-glow {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75vw;
+  max-width: 900px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(139, 53, 255, 0.18) 0%, rgba(255, 106, 0, 0.05) 55%, transparent 75%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .registration-container {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 900px;
+  max-width: 880px;
   margin: 0 auto;
 }
 
+/* Header */
 .registration-header {
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
   text-align: center;
 }
 
-.registration-code {
-  display: inline-block;
-  margin-bottom: 1rem;
-  padding: 0.45rem 0.8rem;
-  border: 1px solid var(--pink);
-  color: var(--pink);
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+.registration-kicker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1.25rem;
+  padding: 6px 18px;
+  border: 1.5px solid rgba(168, 85, 247, 0.45);
+  background: rgba(34, 11, 64, 0.65);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  color: #ffd000;
+  font-family: var(--font-display, 'Press Start 2P', monospace);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  box-shadow: 0 0 16px rgba(139, 53, 255, 0.25);
+}
+
+.kicker-spark {
+  color: #ffd000;
+  font-size: 0.85em;
 }
 
 .registration-header h1 {
   margin: 0 0 1rem;
-  color: var(--white);
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 7vw, 5rem);
-  line-height: 1;
+  color: #ffffff;
+  font-family: var(--font-display, 'Press Start 2P', monospace);
+  font-size: clamp(1.85rem, 5vw, 3.8rem);
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 24px rgba(139, 53, 255, 0.35);
 }
 
-.registration-header h1 span {
-  color: var(--pink);
+.registration-header h1 span.highlight-forge {
+  color: #ffd000;
+  text-shadow: 0 0 24px rgba(255, 208, 0, 0.55);
 }
 
-.registration-header p {
-  margin: 0.5rem 0;
-  color: var(--gray-400);
+.registration-subtitle {
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: clamp(0.98rem, 1.5vw, 1.15rem);
+  color: #e0c3fc;
+  max-width: 600px;
+  margin: 0 auto 1.25rem;
   line-height: 1.6;
 }
 
+.registration-fee-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 20px;
+  background: rgba(255, 208, 0, 0.08);
+  border: 1.5px solid rgba(255, 208, 0, 0.35);
+  border-radius: 999px;
+  color: #fef08a;
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 0 18px rgba(255, 208, 0, 0.12);
+}
+
+.fee-icon {
+  font-size: 1.1rem;
+}
+
+.fee-dot {
+  color: rgba(255, 208, 0, 0.45);
+}
+
+.registration-fee-pill strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Registration Frame (Terminal) */
 .registration-form-frame {
+  position: relative;
+  border-radius: 14px;
   overflow: hidden;
-  border: 2px solid var(--black);
-  background: #fff;
-  box-shadow: 10px 10px 0 var(--pink);
+  border: 1.5px solid rgba(168, 85, 247, 0.45);
+  background: #181129;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8), 0 0 28px rgba(139, 53, 255, 0.22);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.registration-form-frame:hover {
+  border-color: rgba(255, 208, 0, 0.5);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 208, 0, 0.18);
+}
+
+.form-frame-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: rgba(24, 17, 41, 0.98);
+  border-bottom: 1.5px solid rgba(168, 85, 247, 0.3);
+  box-sizing: border-box;
+}
+
+.frame-traffic-lights {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.traffic-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-red {
+  background: #ef4444;
+  box-shadow: 0 0 6px rgba(239, 68, 68, 0.6);
+}
+
+.dot-yellow {
+  background: #eab308;
+  box-shadow: 0 0 6px rgba(234, 179, 8, 0.6);
+}
+
+.dot-green {
+  background: #22c55e;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.6);
+}
+
+.frame-title {
+  font-family: var(--font-display, 'Press Start 2P', monospace);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  color: #e0c3fc;
+  text-align: center;
+  flex: 1;
+  padding: 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.frame-external-link {
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffd000;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(255, 208, 0, 0.1);
+  border: 1px solid rgba(255, 208, 0, 0.3);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.frame-external-link:hover {
+  background: rgba(255, 208, 0, 0.2);
+  color: #ffffff;
+  border-color: #ffd000;
 }
 
 .registration-form-frame iframe {
   display: block;
   width: 100%;
-  min-height: 1200px;
+  min-height: 1250px;
   border: 0;
+  background: #ffffff;
 }
 
+/* Fallback message */
 .registration-form-fallback {
-  margin: 1.5rem 0 0;
-  color: var(--gray-400);
+  margin: 1.75rem 0 0;
+  color: #cbd5e1;
   text-align: center;
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: 0.95rem;
   line-height: 1.6;
 }
 
 .registration-form-fallback a {
-  color: var(--pink);
+  color: #ffd000;
+  font-weight: 600;
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.registration-form-fallback a:hover {
+  color: #ff9f1c;
 }
 
 @media (max-width: 768px) {
   .registration-page {
-    padding: 6rem 0.75rem 3rem;
+    padding: calc(68px + 1.5rem) 1rem 3rem;
   }
 
-  .registration-form-frame {
-    box-shadow: 6px 6px 0 var(--pink);
+  .registration-header {
+    margin-bottom: 1.75rem;
+  }
+
+  .registration-kicker-badge {
+    font-size: 0.6rem;
+    padding: 5px 14px;
+  }
+
+  .registration-fee-pill {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    gap: 8px;
+  }
+
+  .form-frame-header {
+    padding: 10px 14px;
+  }
+
+  .frame-title {
+    display: none;
+  }
+
+  .registration-form-frame iframe {
+    min-height: 1100px;
   }
 }
