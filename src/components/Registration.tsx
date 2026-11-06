@@ -23,7 +23,7 @@ const Registration = () => {
           </h1>
 
           <p className="registration-subtitle">
-            Complete the official form below to register your squad for the 30-hour hackathon.
+            Follow the 2 simple steps below: Pay the registration fee, save your payment screenshot, and submit your squad details.
           </p>
 
           <div className="registration-fee-pill">
@@ -33,6 +33,66 @@ const Registration = () => {
             <span>Team Size: <strong>2–4 Members</strong></span>
           </div>
         </header>
+
+        {/* ====================================================================
+            STEP 1: PAYMENT QR & INSTRUCTIONS
+            ==================================================================== */}
+        <section className="registration-payment-card" aria-label="Registration Fee Payment">
+          <div className="payment-card-badge">
+            <span className="payment-step-num">STEP 1</span>
+            <span className="payment-step-title">SCAN & PAY REGISTRATION FEE</span>
+          </div>
+
+          <div className="payment-card-body">
+            <div className="payment-qr-frame">
+              <img
+                src="/pixelforge-payment-qr.jpg"
+                alt="Pixel Forge UPI Payment QR Code"
+                className="payment-qr-img"
+              />
+              <div className="payment-qr-scan-badge">Scan to Pay ₹250</div>
+            </div>
+
+            <div className="payment-instructions">
+              <h2 className="payment-instruction-title">Pay ₹250 via any UPI App</h2>
+              
+              <ul className="payment-instruction-list">
+                <li>
+                  <span className="instruction-step-icon">1</span>
+                  <span>Open <strong>GPay, PhonePe, Paytm, BHIM</strong> or any UPI app on your phone.</span>
+                </li>
+                <li>
+                  <span className="instruction-step-icon">2</span>
+                  <span>Scan this QR code and complete the payment of <strong>₹250 per team</strong>.</span>
+                </li>
+                <li>
+                  <span className="instruction-step-icon">3</span>
+                  <span className="highlight-critical">
+                    <strong>Take a clear screenshot</strong> of the completed payment receipt showing the <strong>Transaction ID / UTR number</strong>.
+                  </span>
+                </li>
+                <li>
+                  <span className="instruction-step-icon">4</span>
+                  <span>Proceed to <strong>Step 2</strong> below to fill in your team details and upload this payment screenshot.</span>
+                </li>
+              </ul>
+
+              <div className="payment-notice-pill">
+                <span className="notice-icon">📸</span>
+                <span><strong>Remember:</strong> Store your payment screenshot safely — it is required in the form below!</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ====================================================================
+            STEP 2: FORM TERMINAL
+            ==================================================================== */}
+        <div className="registration-step2-indicator">
+          <span className="step2-badge">STEP 2</span>
+          <span className="step2-text">Fill Out Team Details & Attach Payment Screenshot Below</span>
+          <span className="step2-arrow" aria-hidden="true">↓</span>
+        </div>
 
         <div className="registration-form-frame">
           <div className="form-frame-header">

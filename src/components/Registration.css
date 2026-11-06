@@ -97,7 +97,7 @@
   font-family: var(--font-body, 'Space Grotesk', sans-serif);
   font-size: clamp(0.98rem, 1.5vw, 1.15rem);
   color: #e0c3fc;
-  max-width: 600px;
+  max-width: 620px;
   margin: 0 auto 1.25rem;
   line-height: 1.6;
 }
@@ -130,7 +130,217 @@
   font-weight: 700;
 }
 
-/* Registration Frame (Terminal) */
+/* ==========================================================================
+   STEP 1: PAYMENT CARD
+   ========================================================================== */
+.registration-payment-card {
+  position: relative;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  background: rgba(24, 17, 41, 0.95);
+  border: 1.5px solid rgba(168, 85, 247, 0.45);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75), 0 0 24px rgba(139, 53, 255, 0.2);
+  padding: 1.5rem 1.75rem 1.75rem;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.registration-payment-card:hover {
+  border-color: rgba(255, 208, 0, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 30px rgba(255, 208, 0, 0.15);
+}
+
+.payment-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.payment-step-num {
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #ff8a1a 0%, #ea580c 100%);
+  color: #ffffff;
+  font-family: var(--font-display, 'Press Start 2P', monospace);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(255, 106, 0, 0.4);
+}
+
+.payment-step-title {
+  font-family: var(--font-display, 'Press Start 2P', monospace);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: #ffd000;
+  text-shadow: 0 0 10px rgba(255, 208, 0, 0.4);
+}
+
+.payment-card-body {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.payment-qr-frame {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 208, 0, 0.6);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 208, 0, 0.25);
+  margin: 0 auto;
+}
+
+.payment-qr-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+  border-radius: 6px;
+}
+
+.payment-qr-scan-badge {
+  margin-top: 10px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: #10091f;
+  color: #ffd000;
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.payment-instructions {
+  flex: 1;
+  min-width: 280px;
+}
+
+.payment-instruction-title {
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 1rem;
+}
+
+.payment-instruction-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.payment-instruction-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+.instruction-step-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(168, 85, 247, 0.25);
+  border: 1px solid rgba(168, 85, 247, 0.6);
+  color: #ffd000;
+  font-weight: 700;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.highlight-critical {
+  color: #fef08a;
+}
+
+.highlight-critical strong {
+  color: #ffd000;
+}
+
+.payment-notice-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 15px;
+  border-radius: 8px;
+  background: rgba(234, 88, 12, 0.15);
+  border: 1.5px solid rgba(234, 88, 12, 0.45);
+  color: #ffedd5;
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.notice-icon {
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   STEP 2: FORM TERMINAL INDICATOR
+   ========================================================================== */
+.registration-step2-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+  padding: 6px 4px;
+  flex-wrap: wrap;
+}
+
+.step2-badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #8b35ff 0%, #6d28d9 100%);
+  color: #ffffff;
+  font-family: var(--font-display, 'Press Start 2P', monospace);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(139, 53, 255, 0.4);
+}
+
+.step2-text {
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.step2-arrow {
+  color: #ffd000;
+  font-weight: 900;
+  animation: pf-step-bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes pf-step-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+/* ==========================================================================
+   REGISTRATION FRAME (TERMINAL)
+   ========================================================================== */
 .registration-form-frame {
   position: relative;
   border-radius: 14px;
@@ -267,6 +477,30 @@
     font-size: 0.85rem;
     padding: 6px 14px;
     gap: 8px;
+  }
+
+  .payment-card-body {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 1.5rem;
+  }
+
+  .payment-qr-frame {
+    margin: 0 auto;
+  }
+
+  .payment-qr-img {
+    width: 175px;
+    height: 175px;
+  }
+
+  .payment-card-badge {
+    flex-wrap: wrap;
+  }
+
+  .payment-step-title {
+    font-size: 0.62rem;
   }
 
   .form-frame-header {
