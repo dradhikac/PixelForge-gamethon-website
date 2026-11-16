@@ -426,7 +426,7 @@ body,
 .hero-registration-status-bar {
   width: calc(899 * var(--u));
   height: calc(56 * var(--u));
-  margin-top: calc(42 * var(--u));
+  margin-top: calc(34 * var(--u));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -492,10 +492,37 @@ body,
   font-weight: 600;
 }
 
+/* 6b. Walk-in Registration Notice */
+.hero-walkin-note {
+  margin-top: calc(14 * var(--u));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(8 * var(--u));
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: calc(19 * var(--u));
+  font-weight: 500;
+  color: #e2d9f3;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.hero-walkin-note .walkin-spark {
+  color: #ffd000;
+  font-size: 0.85em;
+  text-shadow: 0 0 calc(8 * var(--u)) rgba(255, 208, 0, 0.6);
+}
+
+.hero-walkin-note strong {
+  color: #ffd000;
+  font-weight: 700;
+  text-shadow: 0 0 calc(12 * var(--u)) rgba(255, 208, 0, 0.35);
+}
+
 /* 7. Buttons */
 .hero-dual-cta-row {
   width: 100%;
-  margin-top: calc(32 * var(--u));
+  margin-top: calc(18 * var(--u));
   display: flex;
   justify-content: center;
   gap: calc(31 * var(--u));
@@ -680,6 +707,13 @@ body,
   .status-bar-vertical-divider { display: none; }
   .status-clock-svg { width: 20px; height: 20px; }
   .status-deadline-text { font-size: 14px; white-space: normal; }
+
+  .hero-walkin-note {
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 0 10px;
+    line-height: 1.45;
+  }
 
   .hero-dual-cta-row {
     flex-direction: column;

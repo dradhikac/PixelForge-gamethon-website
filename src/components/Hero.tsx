@@ -265,6 +265,19 @@ const Hero = () => {
                 </div>
               </motion.div>
 
+              {/* 6b. Walk-in Registrations Notice */}
+              <motion.div
+                className="hero-walkin-note"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.36 }}
+              >
+                <span className="walkin-spark" aria-hidden="true">✦</span>
+                <span>
+                  Walk-in registrations will be open on <strong>19th November before 9:00 AM.</strong>
+                </span>
+              </motion.div>
+
               {/* 7. Main Action Buttons (Two Horizontally Aligned Buttons) */}
               <motion.div
                 className="hero-dual-cta-row"
