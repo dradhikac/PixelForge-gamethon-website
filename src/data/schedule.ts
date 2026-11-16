@@ -25,7 +25,7 @@ export const championshipSchedule: DayItinerary[] = [
     events: [
       {
         time: "08:30 – 09:15",
-        title: "REGISTRATION & TEAM CHECK-IN",
+        title: "REGISTRATION & TEAM CHECK-IN (INCLUDING ON-SPOT REGISTRATION)",
         category: "check-in",
         badge: "CHECK-IN",
         accent: "slate"
