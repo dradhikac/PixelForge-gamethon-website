@@ -260,7 +260,7 @@ const Hero = () => {
                 <div className="status-deadline-area">
                   <ClockIconSvg />
                   <span className="status-deadline-text">
-                    Registration Closes <strong>15 November 2026</strong>
+                    Registration Closes <strong>18 November 2026</strong>
                   </span>
                 </div>
               </motion.div>
