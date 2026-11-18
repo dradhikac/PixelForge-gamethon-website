@@ -81,7 +81,7 @@ const Footer = () => {
 
               <li>
                 <a href="/registration" className="footer-highlight-link">
-                  Register Your Team →
+                  Registration Status (Closed) →
                 </a>
               </li>
             </ul>

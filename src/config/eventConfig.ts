@@ -24,7 +24,7 @@ export const eventConfig = {
   googleFormUrl:
     "https://docs.google.com/forms/d/e/1FAIpQLSfg6DS1RSHt6iJX3Ln1SDbx62aSkoKpuo9ZZ2em2P27W1vJOA/viewform",
 
-  registrationOpen: true,
+  registrationOpen: false,
   isFreeEvent: false,
   registrationFee: "₹250 per team",
   prizeSummary: "Exciting cash prizes",

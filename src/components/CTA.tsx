@@ -17,27 +17,25 @@ const CTA = () => {
           <div className="cta-ember-glow" />
 
           {/* Badge */}
-          <div className="cta-registration-pill">
-            <span className="pill-dot" />
-            <span>OFFICIAL REGISTRATION OPEN</span>
+          <div className="cta-registration-pill cta-pill-closed">
+            <span className="pill-dot pill-dot-closed" />
+            <span>REGISTRATIONS ARE CLOSED</span>
           </div>
 
           {/* Heading */}
           <h2 className="cta-heading">
-            READY TO ENTER THE <span className="highlight-forge">ARENA?</span>
+            THE ARENA IS <span className="highlight-forge">READY.</span>
           </h2>
 
           {/* Description */}
           <p className="cta-description">
-            Assemble your squad, master strategic game theory, and compete for championship glory
-            in the 30-Hour Build Challenge. Registrations close <strong>20 October 2026</strong>.
+            Online and walk-in registrations are now officially closed. Registered squads, get ready for the 30-Hour Build Challenge on 19–20 November at DSATM!
           </p>
 
           {/* Action CTA Button */}
           <div className="cta-button-wrap">
-            <a href="/registration" className="forge-register-btn">
-              <span>REGISTER YOUR TEAM NOW</span>
-              <span className="btn-arrow">→</span>
+            <a href="/registration" className="forge-register-btn forge-btn-closed">
+              <span>REGISTRATIONS CLOSED</span>
             </a>
           </div>
 

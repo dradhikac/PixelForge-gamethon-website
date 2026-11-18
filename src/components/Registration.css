@@ -102,6 +102,115 @@
   line-height: 1.6;
 }
 
+/* Registration Closed Card */
+.registration-closed-card {
+  margin: 2rem auto 0;
+  max-width: 760px;
+  background: rgba(24, 17, 41, 0.95);
+  border: 1.5px solid rgba(255, 208, 0, 0.5);
+  border-radius: 16px;
+  padding: 2rem 2.25rem;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.8), 0 0 28px rgba(255, 208, 0, 0.15);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.closed-card-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(255, 208, 0, 0.15);
+  border: 1px solid rgba(255, 208, 0, 0.45);
+  color: #ffd000;
+  font-family: var(--font-display, 'Press Start 2P', monospace);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.25rem;
+}
+
+.closed-card-text {
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: 1.08rem;
+  color: #f1f5f9;
+  line-height: 1.7;
+  margin: 0 0 1.5rem;
+}
+
+.closed-card-text strong {
+  color: #ffd000;
+}
+
+.closed-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 18px;
+  background: rgba(16, 9, 31, 0.7);
+  border-radius: 10px;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  margin-bottom: 1.75rem;
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: 0.92rem;
+  color: #e0c3fc;
+}
+
+.closed-meta-dot {
+  color: rgba(255, 208, 0, 0.4);
+}
+
+.closed-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.closed-return-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.6rem;
+  background: linear-gradient(135deg, #ff8a1a 0%, #ea580c 100%);
+  color: #ffffff;
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1.5px solid #ffa21f;
+  box-shadow: 0 0 16px rgba(255, 106, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.closed-return-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(255, 106, 0, 0.7);
+}
+
+.closed-brochure-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.6rem;
+  background: rgba(34, 11, 64, 0.85);
+  color: #ffd000;
+  font-family: var(--font-body, 'Space Grotesk', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255, 208, 0, 0.5);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.closed-brochure-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 208, 0, 0.15);
+}
+
 .registration-fee-pill {
   display: inline-flex;
   align-items: center;

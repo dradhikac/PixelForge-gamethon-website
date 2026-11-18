@@ -188,14 +188,14 @@ const Navbar = () => {
             <span aria-hidden="true">{isDarkTheme ? "☀" : "☾"}</span>
           </button>
 
-          {/* Glowing Orange Register Now Button */}
+          {/* Register CTA */}
           <a
             href="/registration"
-            className="nav-cta"
+            className="nav-cta nav-cta-closed"
             onClick={handlePageNavigation}
+            title="Registrations are officially closed"
           >
-            <span>REGISTER NOW</span>
-            <span className="nav-cta-arrow">→</span>
+            <span>REGISTRATIONS CLOSED</span>
           </a>
 
           {/* Mobile Menu Toggle Button */}
@@ -246,10 +246,10 @@ const Navbar = () => {
 
                 <a
                   href="/registration"
-                  className="mobile-nav-cta"
+                  className="mobile-nav-cta mobile-nav-cta-closed"
                   onClick={handlePageNavigation}
                 >
-                  Register Your Team →
+                  Registrations Closed
                 </a>
               </div>
             </motion.div>

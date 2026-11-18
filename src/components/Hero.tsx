@@ -61,20 +61,7 @@ const TicketPassIconSvg = () => (
   </svg>
 );
 
-/* Golden Clock SVG Icon (Status Bar) */
-const ClockIconSvg = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="status-clock-svg">
-    <circle cx="12" cy="12" r="9.5" fill="#ffd000" stroke="#fef08a" strokeWidth="1.5" />
-    <path d="M12 6.5V12L15.5 14" stroke="#1c0a35" strokeWidth="2.2" strokeLinecap="round" />
-  </svg>
-);
 
-/* Team / Squad SVG Icon (Register Button) */
-const TeamIconSvg = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="btn-action-svg">
-    <path d="M16 11C17.66 11 18.99 9.66 18.99 8C18.99 6.34 17.66 5 16 5C14.34 5 13.01 6.34 13.01 8C13.01 9.66 14.34 11 16 11ZM8 11C9.66 11 10.99 9.66 10.99 8C10.99 6.34 9.66 5 8 5C6.34 5 5.01 6.34 5.01 8C5.01 9.66 6.34 11 8 11ZM8 13C5.67 13 1 14.17 1 16.5V19H15V16.5C15 14.17 10.33 13 8 13ZM16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V19H23V16.5C23 14.17 18.33 13 16 13Z" />
-  </svg>
-);
 
 /* Gamepad SVG Icon (Explore Arena Button) */
 const GamepadIconSvg = () => (
@@ -257,25 +244,12 @@ const Hero = () => {
                   <span className="status-live-banner-text">ARENA IS LIVE NOW</span>
                 </div>
                 <div className="status-bar-vertical-divider" />
-                <div className="status-deadline-area">
-                  <ClockIconSvg />
-                  <span className="status-deadline-text">
-                    Registration Closes <strong>18 November 2026</strong>
+                <div className="status-deadline-area status-closed-area">
+                  <span className="status-closed-lock-icon" aria-hidden="true">🔒</span>
+                  <span className="status-deadline-text status-closed-text">
+                    <strong>REGISTRATIONS ARE CLOSED</strong>
                   </span>
                 </div>
-              </motion.div>
-
-              {/* 6b. Walk-in Registrations Notice */}
-              <motion.div
-                className="hero-walkin-note"
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.36 }}
-              >
-                <span className="walkin-spark" aria-hidden="true">✦</span>
-                <span>
-                  Walk-in registrations will be open on <strong>19th November before 9:00 AM.</strong>
-                </span>
               </motion.div>
 
               {/* 7. Main Action Buttons (Two Horizontally Aligned Buttons) */}
@@ -285,11 +259,14 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: 0.4 }}
               >
-                {/* Button 1: REGISTER YOUR TEAM */}
-                <a href="/registration" className="hero-action-btn primary-register-btn">
-                  <TeamIconSvg />
-                  <span>REGISTER YOUR TEAM</span>
-                  <span className="action-btn-arrow">→</span>
+                {/* Button 1: REGISTRATIONS CLOSED */}
+                <a
+                  href="/registration"
+                  className="hero-action-btn primary-register-btn btn-closed"
+                  title="Registrations are officially closed"
+                >
+                  <span className="btn-closed-icon" aria-hidden="true">🔒</span>
+                  <span>REGISTRATIONS CLOSED</span>
                 </a>
 
                 {/* Button 2: EXPLORE THE ARENA */}

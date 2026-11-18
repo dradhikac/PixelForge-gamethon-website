@@ -426,7 +426,7 @@ body,
 .hero-registration-status-bar {
   width: calc(899 * var(--u));
   height: calc(56 * var(--u));
-  margin-top: calc(34 * var(--u));
+  margin-top: calc(40 * var(--u));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -492,37 +492,28 @@ body,
   font-weight: 600;
 }
 
-/* 6b. Walk-in Registration Notice */
-.hero-walkin-note {
-  margin-top: calc(14 * var(--u));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: calc(8 * var(--u));
+.status-closed-area {
+  gap: calc(10 * var(--u));
+}
+
+.status-closed-lock-icon {
+  font-size: calc(22 * var(--u));
+  line-height: 1;
+}
+
+.status-closed-text strong {
   font-family: var(--font-body, 'Poppins', sans-serif);
-  font-size: calc(19 * var(--u));
-  font-weight: 500;
-  color: #e2d9f3;
-  text-align: center;
-  letter-spacing: 0.01em;
-}
-
-.hero-walkin-note .walkin-spark {
-  color: #ffd000;
-  font-size: 0.85em;
-  text-shadow: 0 0 calc(8 * var(--u)) rgba(255, 208, 0, 0.6);
-}
-
-.hero-walkin-note strong {
-  color: #ffd000;
+  font-size: calc(22 * var(--u));
   font-weight: 700;
-  text-shadow: 0 0 calc(12 * var(--u)) rgba(255, 208, 0, 0.35);
+  letter-spacing: 0.04em;
+  color: #ffd000;
+  text-shadow: 0 0 calc(12 * var(--u)) rgba(255, 208, 0, 0.45);
 }
 
 /* 7. Buttons */
 .hero-dual-cta-row {
   width: 100%;
-  margin-top: calc(18 * var(--u));
+  margin-top: calc(34 * var(--u));
   display: flex;
   justify-content: center;
   gap: calc(31 * var(--u));
@@ -572,6 +563,24 @@ body,
 
 .primary-register-btn:hover {
   box-shadow: 0 0 calc(40 * var(--u)) rgba(255, 140, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.primary-register-btn.btn-closed {
+  color: #fef08a;
+  background: linear-gradient(180deg, #441860 0%, #290c3d 100%);
+  border: max(2px, calc(3 * var(--u))) solid rgba(255, 208, 0, 0.65);
+  box-shadow: 0 0 calc(18 * var(--u)) rgba(139, 53, 255, 0.35);
+  text-shadow: none;
+}
+
+.primary-register-btn.btn-closed:hover {
+  transform: none;
+  box-shadow: 0 0 calc(24 * var(--u)) rgba(255, 208, 0, 0.45);
+}
+
+.btn-closed-icon {
+  font-size: 1.15em;
+  line-height: 1;
 }
 
 .secondary-explore-btn {
@@ -708,12 +717,8 @@ body,
   .status-clock-svg { width: 20px; height: 20px; }
   .status-deadline-text { font-size: 14px; white-space: normal; }
 
-  .hero-walkin-note {
-    margin-top: 10px;
-    font-size: 14px;
-    padding: 0 10px;
-    line-height: 1.45;
-  }
+  .status-closed-lock-icon { font-size: 16px; }
+  .status-closed-text strong { font-size: 13.5px; }
 
   .hero-dual-cta-row {
     flex-direction: column;
